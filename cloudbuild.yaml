@@ -7,9 +7,9 @@ steps:
   entrypoint: mvn
   args: ['package','-Dmaven.test.skip=true']
 artifacts:
-mavenArtifacts:
-- repository: 'https://us-east1-maven.pkg.dev/poc07182924/mavenartifact'
-  path: '/workspace/target/'
-  artifactId: 'functions-hello-world'
-  groupId: 'com.google.cloud.functions'
-  version: 'version'
+  mavenArtifacts:
+  - repository: 'https://us-east1-maven.pkg.dev/poc07182924/mavenartifact'
+    path: '/workspace/target/'
+    artifactId: 'functions-hello-world'
+    groupId: 'com.google.cloud.functions'
+    version: 'version'
