@@ -13,3 +13,5 @@ artifacts:
     artifactId: 'functions-hello-world'
     groupId: 'com.google.cloud.functions'
     version: 'version'
+options:
+  logging: CLOUD_LOGGING_ONLY
