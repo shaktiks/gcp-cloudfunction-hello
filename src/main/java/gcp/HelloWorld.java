@@ -13,6 +13,6 @@ public class HelloWorld implements HttpFunction {
   public void service(HttpRequest request, HttpResponse response)
       throws IOException {
     BufferedWriter writer = response.getWriter();
-    writer.write("Hello World!");
+    writer.write("Hello World with change!");
   }
 }
