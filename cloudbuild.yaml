@@ -1,17 +1,14 @@
 steps:
-- name: gcr.io/cloud-builders/mvn
-  entrypoint: mvn
-  args: ['--version']
-steps:
-- name: gcr.io/cloud-builders/mvn
-  entrypoint: mvn
-  args: ['package','-Dmaven.test.skip=true']
-artifacts:
-  mavenArtifacts:
-  - repository: 'https://us-east1-maven.pkg.dev/poc07182924/mavenartifact'
-    path: '/workspace/target/'
-    artifactId: 'functions-hello-world'
-    groupId: 'com.google.cloud.functions'
-    version: 'version'
-options:
-  logging: CLOUD_LOGGING_ONLY
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  args:
+  - gcloud
+  - functions
+  - deploy
+  - gcp-cloudfunction-hello
+  - --region=us-east1
+  - --source=.
+  - --trigger-http
+  - --runtime=java17
+  - --entry-point=functions.HelloWorld
+  - --memory=512MB
+  - --allow-unauthenticated
