@@ -13,6 +13,6 @@ steps:
   - --entry-point=functions.HelloWorld
   - --memory=512MB
   - --allow-unauthenticated
-  - --project=poc-07202024-dev
+  - --project=poc-07202024-tool
 options:
   logging: CLOUD_LOGGING_ONLY
