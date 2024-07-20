@@ -5,6 +5,7 @@ steps:
   - functions
   - deploy
   - gcp-cloudfunction-hello
+  - --gen2
   - --region=us-east1
   - --source=.
   - --trigger-http
