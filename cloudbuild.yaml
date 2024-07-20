@@ -12,3 +12,5 @@ steps:
   - --entry-point=functions.HelloWorld
   - --memory=512MB
   - --allow-unauthenticated
+options:
+  logging: CLOUD_LOGGING_ONLY
